@@ -69,6 +69,13 @@ Issuing of navigation goals and obtaining the result upon completion
 
 Publish to this topic or use the ROS Action API to cancel an active navigation goal.
 
+### /robot_pose
+**ROS Interface Type:** Topic
+
+**Interface Type:** [Pose][pose]
+
+The coordinates of the robot's current location on the map (Navigation must be active).
+
 ### /modbus_manager/set_digital_output
 **ROS Interface Type:** Service
 
@@ -113,6 +120,7 @@ Whether DTZ is active (Read Only)
 [move-base-action]: <http://docs.ros.org/en/melodic/api/move_base_msgs/html/action/MoveBase.html>
 [empty-service]: <http://docs.ros.org/en/melodic/api/std_srvs/html/srv/Empty.html>
 [pose-with-covariance-stamped]: <http://docs.ros.org/en/api/geometry_msgs/html/msg/PoseWithCovarianceStamped.html>
+[pose]: <http://docs.ros.org/en/melodic/api/geometry_msgs/html/msg/Pose.html>
 [goal-id]: <http://docs.ros.org/en/kinetic/api/actionlib_msgs/html/msg/GoalID.html>
 [actions]: <http://wiki.ros.org/actionlib>
 [bool]: <http://docs.ros.org/en/api/std_msgs/html/msg/Bool.html>
