@@ -115,6 +115,17 @@ Whether E-Stop is active (Read Only)
 
 Whether DTZ is active (Read Only)
 
+### /mission_control/run_mission_from_file
+**ROS Interface Type:** Service
+
+**Type:** mission_control/run_mission_from_file*
+
+Starts a mission previously created in Dispatcher
+
+Example Request:
+
+    "request: 'run delivery route'"
+
 
 [examples-repo]: <https://github.com/waypointrobotics/rosbridge-websocket-examples>
 [move-base-action]: <http://docs.ros.org/en/melodic/api/move_base_msgs/html/action/MoveBase.html>
