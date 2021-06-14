@@ -118,7 +118,7 @@ Whether DTZ is active (Read Only)
 ### /mission_control/run_mission_from_file
 **ROS Interface Type:** Service
 
-**Type:** mission_control/run_mission_from_file*
+**Type:** waypoint_ui/SingleWaypointOp* (this is a custom service type so it can only be used via ROSBridge)
 
 Starts a mission previously created in Dispatcher
 
