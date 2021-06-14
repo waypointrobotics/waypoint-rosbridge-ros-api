@@ -15,6 +15,7 @@ Some of the interfaces (topics, services or actions) listed below can only be us
 The current state of the robot/Dispatcher (Mapping, Navigation, etc). "nav_running" indicates the robot is fully ready to accept goals, "nav_uninitialized" means that the navigation has been started but the robot has not been localized (i.e., the initial position has not been provided).
 
 
+
 ### /start_navigation , /stop_navigation
 **ROS Interface Type:** Service
 
@@ -23,12 +24,14 @@ The current state of the robot/Dispatcher (Mapping, Navigation, etc). "nav_runni
 Start and Stop autonomous navigation mode.
 
 
+
 ### /initialpose
 **ROS Interface Type:** Topic
 
 **Type:** [PoseWithCovarianceStamped][pose-with-covariance-stamped]
 
 Publish to this topic is used to set the robot’s initial position after starting navigation.
+
 
 
 ### /waypoint_db/retrieve_waypoint
@@ -59,12 +62,14 @@ pose:
 ```
 
 
+
 ### /waypoint_move_base/goal , /waypoint_move_base/result
 **ROS Interface Type:** Topic/[Action][actions]
 
 **Interface Type:** [MoveBase Action][move-base-action]
 
 Issuing of navigation goals and obtaining the result upon completion
+
 
 
 ### /waypoint_move_base/cancel
@@ -75,12 +80,14 @@ Issuing of navigation goals and obtaining the result upon completion
 Publish to this topic or use the ROS Action API to cancel an active navigation goal.
 
 
+
 ### /robot_pose
 **ROS Interface Type:** Topic
 
 **Interface Type:** [Pose][pose]
 
 The coordinates of the robot's current location on the map (Navigation must be active).
+
 
 
 ### /modbus_manager/set_digital_output
@@ -95,12 +102,14 @@ Example Request:
     "io_name: 'lights' value: false"
 
 
+
 ### /waypoint/aux_battery_soc
 **ROS Interface Type:** Topic
 
 **Type:** [std_msgs/Float32][float-32]
 
 The Battery State of Charge: (Read Only)
+
 
 
 ### /waypoint/battery_is_charging
@@ -111,6 +120,7 @@ The Battery State of Charge: (Read Only)
 Whether the Battery is charging
 
 
+
 ### /waypoint/embedded_response_active
 **ROS Interface Type:** Topic
 
@@ -119,12 +129,14 @@ Whether the Battery is charging
 Whether E-Stop is active (Read Only)
 
 
+
 ### /waypoint/dtz_response_active
 **ROS Interface Type:** Topic
 
 **Type:** [std_msgs/Bool][bool]
 
 Whether DTZ is active (Read Only)
+
 
 
 ### /mission_control/run_mission_from_file
