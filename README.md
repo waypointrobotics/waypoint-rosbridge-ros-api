@@ -6,7 +6,7 @@ The following is a small subset of all available interfaces on Waypoint Robotics
 
 Some of the interfaces (topics, services or actions) listed below can only be used via ROSBridge and not directly through ROS, because they use custom message or service definitions. Such interfaces are marked with a * symbol. While examples on how to establish communication to ROSBridge using a basic websocket is provided in [this repository][examples-repo], use of a established ROSbridge clients such as roslibjs, roslibpy or jrosbridge is encouraged.
 
-
+<br/><br/>
 ### /dispatcher/app_state
 **ROS Interface Type:** Topic
 
@@ -14,8 +14,7 @@ Some of the interfaces (topics, services or actions) listed below can only be us
 
 The current state of the robot/Dispatcher (Mapping, Navigation, etc). "nav_running" indicates the robot is fully ready to accept goals, "nav_uninitialized" means that the navigation has been started but the robot has not been localized (i.e., the initial position has not been provided).
 
-
-
+<br/><br/>
 ### /start_navigation , /stop_navigation
 **ROS Interface Type:** Service
 
@@ -23,8 +22,7 @@ The current state of the robot/Dispatcher (Mapping, Navigation, etc). "nav_runni
 
 Start and Stop autonomous navigation mode.
 
-
-
+<br/><br/>
 ### /initialpose
 **ROS Interface Type:** Topic
 
@@ -32,8 +30,7 @@ Start and Stop autonomous navigation mode.
 
 Publish to this topic is used to set the robot’s initial position after starting navigation.
 
-
-
+<br/><br/>
 ### /waypoint_db/retrieve_waypoint
 **ROS Interface Type:** Service
 
@@ -61,8 +58,7 @@ pose:
     w: 1.0
 ```
 
-
-
+<br/><br/>
 ### /waypoint_move_base/goal , /waypoint_move_base/result
 **ROS Interface Type:** Topic/[Action][actions]
 
@@ -70,8 +66,7 @@ pose:
 
 Issuing of navigation goals and obtaining the result upon completion
 
-
-
+<br/><br/>
 ### /waypoint_move_base/cancel
 **ROS Interface Type:** Topic/[Action][actions]
 
@@ -79,8 +74,7 @@ Issuing of navigation goals and obtaining the result upon completion
 
 Publish to this topic or use the ROS Action API to cancel an active navigation goal.
 
-
-
+<br/><br/>
 ### /robot_pose
 **ROS Interface Type:** Topic
 
@@ -88,8 +82,7 @@ Publish to this topic or use the ROS Action API to cancel an active navigation g
 
 The coordinates of the robot's current location on the map (Navigation must be active).
 
-
-
+<br/><br/>
 ### /modbus_manager/set_digital_output
 **ROS Interface Type:** Service
 
@@ -101,8 +94,7 @@ Example Request:
 
     "io_name: 'lights' value: false"
 
-
-
+<br/><br/>
 ### /waypoint/aux_battery_soc
 **ROS Interface Type:** Topic
 
@@ -110,8 +102,7 @@ Example Request:
 
 The Battery State of Charge: (Read Only)
 
-
-
+<br/><br/>
 ### /waypoint/battery_is_charging
 **ROS Interface Type:** Topic
 
@@ -119,8 +110,7 @@ The Battery State of Charge: (Read Only)
 
 Whether the Battery is charging
 
-
-
+<br/><br/>
 ### /waypoint/embedded_response_active
 **ROS Interface Type:** Topic
 
@@ -128,8 +118,7 @@ Whether the Battery is charging
 
 Whether E-Stop is active (Read Only)
 
-
-
+<br/><br/>
 ### /waypoint/dtz_response_active
 **ROS Interface Type:** Topic
 
@@ -137,8 +126,7 @@ Whether E-Stop is active (Read Only)
 
 Whether DTZ is active (Read Only)
 
-
-
+<br/><br/>
 ### /mission_control/run_mission_from_file
 **ROS Interface Type:** Service
 
